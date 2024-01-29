@@ -45,7 +45,12 @@ public class PasswordValidation {
     }
 
     public static boolean isNotCommonPassword(String password){
-        //Your code here!
+    String [] commonPasswords={"Password1","Aa345678","123456789"};
+    for (String commonPassword: commonPasswords){
+        if (password.equals(commonPassword)){
+            return false;
+        }
+    }
         return true;
     }
 
