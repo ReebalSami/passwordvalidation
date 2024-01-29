@@ -1,7 +1,8 @@
 package org.example;
 public class PasswordValidation {
     public static void main(String[] args) {
-        isPasswordLongEnough("12345678");
+
+        System.out.println(isPasswordLongEnough("12345678"));
     }
 
     public static boolean isPasswordLongEnough(String password){
