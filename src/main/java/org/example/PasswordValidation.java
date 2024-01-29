@@ -9,9 +9,14 @@ public class PasswordValidation {
     }
 
     public static boolean doesPasswordContainDigits(String password){
-        //Your code here!
-        return true;
+        for (char c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
+        }
+        return false;
     }
+
 
     public static boolean isUppercaseAndLowercase(String password){
         boolean noUppercaseFound = true;
