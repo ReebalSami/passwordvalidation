@@ -8,5 +8,10 @@ public class passwordvalidation {
         return password.length() >= 8;
     }
 
+    // boolean doesPasswordContainDigits(String password)
+
+    //boolean isUppercaseAndLowercase(String password)
+
+    //boolean isNotCommonPassword(String password)
 
 }
