@@ -37,21 +37,21 @@ public class PasswordValidation {
     }
 
 
-    public static boolean isUppercaseAndLowercase(String password) {
-        boolean noUppercaseFound = true;
-        boolean noLowercaseFound = true;
+    public static boolean isUppercaseAndLowercase(String password){
+        boolean uppercaseFound = false;
+        boolean lowercaseFound = false;
         int i = 0;
 
         if (password == null) return false;
         if (password.length() < 2) return false;
 
-        while ((noLowercaseFound || noUppercaseFound) && i < password.length()) {
-            if (Character.isLowerCase(password.charAt(i))) noLowercaseFound = false;
-            if (Character.isUpperCase(password.charAt(i))) noUppercaseFound = false;
+        while((!lowercaseFound || !uppercaseFound) && i < password.length()){
+            if(Character.isLowerCase(password.charAt(i))) lowercaseFound = true;
+            if(Character.isUpperCase(password.charAt(i))) uppercaseFound = true;
             i++;
         }
 
-        return !(noLowercaseFound || noUppercaseFound);
+        return lowercaseFound && uppercaseFound;
     }
 
     public static boolean isNotCommonPassword(String password) {
