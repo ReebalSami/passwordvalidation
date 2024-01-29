@@ -1,6 +1,12 @@
 package org.example;
 public class PasswordValidation {
     public static void main(String[] args) {
+        String password = "12fffffffT3";
+        System.out.println(isPasswordLongEnough(password));
+        System.out.println(doesPasswordContainDigits(password));
+        System.out.println(isUppercaseAndLowercase(password));
+        //System.out.println(isNotCommonPassword(password));
+
 
     }
 
