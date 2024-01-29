@@ -2,17 +2,26 @@ package org.example;
 public class PasswordValidation {
     public static void main(String[] args) {
 
-        System.out.println(isPasswordLongEnough("12345678"));
     }
 
     public static boolean isPasswordLongEnough(String password){
         return password.length() >= 8;
     }
 
-    // boolean doesPasswordContainDigits(String password)
+    public static boolean doesPasswordContainDigits(String password){
+        //Your code here!
+        return true;
+    }
 
-    //boolean isUppercaseAndLowercase(String password)
+    public static boolean isUppercaseAndLowercase(String password){
+        //Your code here!
+        return true;
+    }
 
-    //boolean isNotCommonPassword(String password)
+    public static boolean isNotCommonPassword(String password){
+        //Your code here!
+        return true;
+    }
+
 
 }
