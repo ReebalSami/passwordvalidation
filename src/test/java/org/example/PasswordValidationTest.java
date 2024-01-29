@@ -205,7 +205,6 @@ class PasswordValidationTest {
         assertTrue(actual);
     }
 
-    // Testing the "isNotCommonPassword"-Function.
     @Test//
     void isNotCommonPassword_whenCommonPassword_thenFalse(){
         //Given
@@ -223,5 +222,33 @@ class PasswordValidationTest {
         boolean actual=PasswordValidation.isNotCommonPassword(uncommonPassword);
         //Then
         assertTrue(actual);
+    }
+
+    @Test //testing special charactors:
+    void ifPassowrdContainSpecialCharactors_whenAb1$1b58_thenTrue() {
+        //given
+        String password = "Ab1$1b58";
+
+
+        //when
+        boolean actual = PasswordValidation.containsSpecialCharacter(password);
+
+        //then
+        assertTrue(actual);
+
+    }
+
+    @Test //testing special charactors:
+    void ifPassowrdDoesNotContainSpecialCharactors_whenAb11b58_thenFalse() {
+        //given
+        String password = "Ab11b58";
+
+
+        //when
+        boolean actual = PasswordValidation.containsSpecialCharacter(password);
+
+        //then
+        assertFalse(actual);
+
     }
 }

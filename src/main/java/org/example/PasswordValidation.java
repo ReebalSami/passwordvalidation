@@ -1,11 +1,12 @@
 package org.example;
 public class PasswordValidation {
     public static void main(String[] args) {
-        String password = "12fffffffT3";
+        String password = "12f!ffffffT3";
         System.out.println(isPasswordLongEnough(password));
         System.out.println(doesPasswordContainDigits(password));
         System.out.println(isUppercaseAndLowercase(password));
-        //System.out.println(isNotCommonPassword(password));
+        System.out.println(isNotCommonPassword(password));
+        System.out.println(containsSpecialCharacter(password));
 
 
     }
@@ -53,6 +54,16 @@ public class PasswordValidation {
     }
         return true;
     }
+
+    public static boolean containsSpecialCharacter(String password) {
+        for (char c : password.toCharArray()) {
+            if (!Character.isLetterOrDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 
 }
