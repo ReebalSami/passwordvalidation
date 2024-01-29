@@ -115,23 +115,7 @@ class PasswordValidationTest {
         //then
         assertTrue(actual);
     }
-    @Test//
-    void isNotCommonPassword_whenCommonPassword_thenFalse(){
-        //Given
-        String commonPassword="Password";
-        //When
-        boolean actual=PasswordValidation.isNotCommonPassword(commonPassword);
-        //Then
-        assertFalse(actual);
-    }
-    void isNotCommonPassword_whenUnCommonPassword_thenTrue(){
-        //Given
-        String uncommonPassword="MyPass1234";
-        //When
-        boolean actual=PasswordValidation.isNotCommonPassword(uncommonPassword);
-        //Then
-        assertFalse(actual);
-    }
+
 
 
 
@@ -222,5 +206,22 @@ class PasswordValidationTest {
     }
 
     // Testing the "isNotCommonPassword"-Function.
-
+    @Test//
+    void isNotCommonPassword_whenCommonPassword_thenFalse(){
+        //Given
+        String commonPassword="Password1";
+        //When
+        boolean actual=PasswordValidation.isNotCommonPassword(commonPassword);
+        //Then
+        assertFalse(actual);
+    }
+    @Test
+     void isNotCommonPassword_whenUnCommonPassword_thenTrue(){
+        //Given
+        String uncommonPassword="MyPass1234";
+        //When
+        boolean actual=PasswordValidation.isNotCommonPassword(uncommonPassword);
+        //Then
+        assertTrue(actual);
+    }
 }
