@@ -2,7 +2,7 @@ package org.example;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class passwordvalidationTest {
+class PasswordValidationTest {
 
     @org.junit.jupiter.api.Test
     void isPasswordLongEnoughTrue() {
@@ -10,7 +10,7 @@ class passwordvalidationTest {
         String password = "12345678";
 
         //when
-        boolean actual = passwordvalidation.isPasswordLongEnough(password);
+        boolean actual = PasswordValidation.isPasswordLongEnough(password);
         //then
         assertTrue(actual);
     }

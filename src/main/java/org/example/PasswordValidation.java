@@ -1,5 +1,5 @@
 package org.example;
-public class passwordvalidation {
+public class PasswordValidation {
     public static void main(String[] args) {
         isPasswordLongEnough("12345678");
     }
