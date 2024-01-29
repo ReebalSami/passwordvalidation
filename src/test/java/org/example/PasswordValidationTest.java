@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PasswordValidationTest {
 
+    //Testing the isPasswordLongEnough-Function.
     @Test
     void isPasswordLongEnough_when12345678_thenTrue() {
         //given
@@ -40,6 +41,7 @@ class PasswordValidationTest {
         assertFalse(actual);
     }
 
+    // Testing the doesPasswordContainDigits-Function
     @Test
     void doesPasswordContainDigits_when1W_thenTrue(){
         //given
@@ -114,6 +116,8 @@ class PasswordValidationTest {
         assertTrue(actual);
     }
 
+
+    // Testing the isUppercaseAndLowercase-Function.
     @Test //when the password doesnt include lowercase:
     void isUppercaseAndLowercase_whenA11_thenFalse(){
         //given
@@ -143,6 +147,17 @@ class PasswordValidationTest {
     void isUppercaseAndLowercase_when11a58_thenFalse() {
         //given
         String password = "11a58";
+
+        //when
+        boolean actual = PasswordValidation.isUppercaseAndLowercase(password);
+
+        //then
+        assertFalse(actual);
+    }
+    @Test //when the password doesnt include uppercase:
+    void isUppercaseAndLowercase_whenNULL_thenFalse() {
+        //given
+        String password = null;
 
         //when
         boolean actual = PasswordValidation.isUppercaseAndLowercase(password);
@@ -188,16 +203,6 @@ class PasswordValidationTest {
         assertTrue(actual);
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    // Testing the "isNotCommonPassword"-Function.
 
 }

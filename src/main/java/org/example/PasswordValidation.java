@@ -14,8 +14,20 @@ public class PasswordValidation {
     }
 
     public static boolean isUppercaseAndLowercase(String password){
-        //Your code here!
-        return true;
+        boolean noUppercaseFound = true;
+        boolean noLowercaseFound = true;
+        int i = 0;
+
+        if(password == null) return false;
+        if(password.length()<2) return false;
+
+        while((noLowercaseFound||noUppercaseFound)&& i < password.length()){
+            if(Character.isLowerCase(password.charAt(i))) noLowercaseFound = false;
+            if(Character.isUpperCase(password.charAt(i))) noUppercaseFound = false;
+            i++;
+        }
+
+        return !(noLowercaseFound || noUppercaseFound);
     }
 
     public static boolean isNotCommonPassword(String password){
